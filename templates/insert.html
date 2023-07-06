@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Website</title>
+  </head>
+  <body>
+    <center>
+        <h1>Welcome to My Show</h1>
+        <form action="{{url_for('create')}}" method="POST">
+       <lable>First Name:</lable>
+       <input type="text" name='first_name' required>
+       <br><br>
+       <lable>Last Name:</lable>
+       <input type="text" name='last_name' required>
+       <br><br>  
+       <lable>Email:</lable>
+       <input type="email" name='email'>
+       <br><br> 
+       <lable>Password:</lable>
+       <input type="text" name='password'>
+       <br><br> 
+       <lable>Mobile:</lable>
+       <input type="text" name='mobile'>
+       <br><br> 
+       <lable>Country:</lable>
+       <input type="text" name='country'>
+       <br><br> 
+       <lable>hobby:</lable>
+       <input type="text" name='hobbies'>
+       <br><br> 
+       <lable>gender:</lable>
+       <input type="text" name='gender'>
+       <br><br> 
+       <input type="submit" name='save'>
+       <br><br> 
+        </form>
+    </center>
+  </body>
+</html>

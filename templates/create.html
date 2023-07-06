@@ -1,0 +1,46 @@
+
+<center>
+    <h2>Python Flask Crud Operations</h2>
+    <h4>Manage Employee</h4>
+    <button onclick="addEmployee()">Add Employee</button>
+
+    <table border="5px">
+        <tr>
+            <th>ID</th>
+            <th>FIRST NAME</th>
+            <th>LAST NAME</th>
+            <th>EMAIL</th>
+            <th>PASSWORD</th>
+            <th>MOBILE NO</th>
+            <th>COUNTRY</th>
+            <th>GENDER</th>
+            <th>ACTIONS</th>
+        </tr>
+        {% for student in students %}
+        <tr>
+            <td>{{ student.id }}</td>
+            <td>{{ student.first_name }}</td>
+            <td>{{ student.last_name }}</td>
+            <td>{{ student.email }}</td>
+            <td>{{ student.password }}</td>
+            <td>{{ student.mobile }}</td>
+            <td>{{ student.country }}</td>
+            <td>{{ student.gender }}</td>
+            <td>
+                <form action="/delete/{{ student.id }}" method="post">
+                    <button type="submit">Delete</button>
+                </form>
+                <form action="/edit/{{ student.id }}" method="get">
+                    <button type="submit">Edit</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</center>
+
+<script>
+    function addEmployee() {
+        window.location.href = "/add_employee";
+    }
+</script>
